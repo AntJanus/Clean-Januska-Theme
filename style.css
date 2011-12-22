@@ -161,9 +161,19 @@ text-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
 -webkit-text-stroke: 1px transparent;
 
  font-smoothing: antialiased;
+ 
 
 }
 
+body{
+
+background-color: #fff; 
+background-image: 
+  -webkit-linear-gradient(0deg, transparent 79px, #ADD4AB 79px, #ADD4AB 81px, transparent 81px),
+  -webkit-linear-gradient(#eee .05em, transparent .05em);
+background-size: 100% 1.2em;
+/*   -webkit-linear-gradient(0deg, transparent 79px, #B92E3B 79px, #B92E3B 81px, transparent 81px), */
+}
 
 
 h1,h2,h3,h4,h5,h6 {

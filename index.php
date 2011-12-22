@@ -26,7 +26,7 @@ $postDate2 = get_the_date('d.m.Y');
 
 echo $postDate ?>" pubdate>
 
-<?php echo $postDate2; ?></time> | <span class="byline fn author"><?php the_author_link();?></span> | <?php the_category(''); ?> | <span class="source-org copyright"><?php bloginfo('name'); ?></span></span></span> 
+<?php echo $postDate2; ?></time> | <span class="byline fn author url"><?php the_author_posts_link(); ?></span> | <a href="mailto:<?php the_author_email(); ?>">email</a> | <?php the_category(''); ?> | <span class="source-org copyright"><?php bloginfo('name'); ?></span></span></span> 
 
    <div class="postContent entry-content">
 

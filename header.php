@@ -1,67 +1,67 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head profile="http://gmpg.org/xfn/11">
-
-	<title><?php wp_title(); ?></title>
-<?php wp_head(); ?>
-		<!-- FAVICON -->
-		<link rel="shortcut icon" href="favicon.ico" /><meta name="generator" content="WordPress" /> 
-		<meta name="title" content="<?php wp_title(''); ?>" />
-		<link href="http://fonts.googleapis.com/css?family=Poly" rel="stylesheet" type="text/css">
-	<meta name="readability-verification" content="nbLkAUkYEnQWqhp75Ds5gpZT4wuTDt2NcGhLTXrJ"/>	
-	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />	
-	<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats please -->
-
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-<meta name="viewport" content="width=device-width" />
-	<?php wp_get_archives('type=monthly&format=link'); ?>
-	<?php //comments_popup_script(); // off by default ?>
-	
-     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Ubuntu:400,700,400italic' rel='stylesheet' type='text/css'>
-     
-	<?php $templateUri = get_template_directory_uri(); ?>
-     
-     
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="<?php echo $templateUri;?>/jquerycycle.js"></script>
-	<script>
-	$(document).ready(function(){ 
-		$(document).ready( function() {
-$('#slideInner').cycle({ 
-    fx:     'fade', 
-    speed: 1500,
-timeout: 6000,
-    pager:  '#nav', 
-    // callback fn that creates a thumbnail to use as pager anchor 
-    pagerAnchorBuilder: function(idx, slide) { 
-        return '<li><a href="#">&bull;</a></li>'; 
-    } 
-  
-});
-
-});
-	
-	
-	});
-	</script>
-
-</head>
-
-<body <?php body_class();?>>
-<header><!-- header -->
-	<div id="innerHeader"><!-- inner header -->
-     	<hgroup>
-          <h1><a href="<?php echo home_url();?>"><?php bloginfo('name'); ?></a></h1>
-          <h2 class="headTag unseen"><a href="#">developer</a> &bull; <a href="#">writer</a> &bull; <a href="#">designer</a></h2>
-          </hgroup>
-          
-          <nav>
-			<?php wp_nav_menu( array('menu' => 'main', 'depth' => 3 )); ?>
-			<div class="clearfix"></div>
-		</nav>
-	<div class="clearfix"></div>
-     </div><!-- end inner header -->
-<div class="clearfix">&nbsp;</div>
-</header><!-- end header -->
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head profile="http://gmpg.org/xfn/11">
+
+	<title><?php wp_title(); ?></title>
+<?php wp_head(); ?>
+		<!-- FAVICON -->
+		<link rel="shortcut icon" href="favicon.ico" /><meta name="generator" content="WordPress" /> 
+		<meta name="title" content="<?php wp_title(''); ?>" />
+		<link href="http://fonts.googleapis.com/css?family=Poly" rel="stylesheet" type="text/css">
+	<meta name="readability-verification" content="nbLkAUkYEnQWqhp75Ds5gpZT4wuTDt2NcGhLTXrJ"/>	
+	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />	
+	<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats please -->
+
+	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+<meta name="viewport" content="width=device-width" />
+	<?php wp_get_archives('type=monthly&format=link'); ?>
+	<?php //comments_popup_script(); // off by default ?>
+	
+     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Ubuntu:400,700,400italic' rel='stylesheet' type='text/css'>
+     
+	<?php $templateUri = get_template_directory_uri(); ?>
+     
+     
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="<?php echo $templateUri;?>/jquerycycle.js"></script>
+	<script>
+	$(document).ready(function(){ 
+		$(document).ready( function() {
+$('#slideInner').cycle({ 
+    fx:     'fade', 
+    speed: 1500,
+timeout: 6000,
+    pager:  '#nav', 
+    // callback fn that creates a thumbnail to use as pager anchor 
+    pagerAnchorBuilder: function(idx, slide) { 
+        return '<li><a href="#">&bull;</a></li>'; 
+    } 
+  
+});
+
+});
+	
+	
+	});
+	</script>
+
+</head>
+
+<body <?php body_class();?>>
+<header><!-- header -->
+	<div id="innerHeader"><!-- inner header -->
+     	<hgroup>
+          <h1><a href="<?php echo home_url();?>"><?php bloginfo('name'); ?></a></h1>
+          <h2 class="headTag unseen"><a href="#">developer</a> &bull; <a href="#">writer</a> &bull; <a href="#">designer</a></h2>
+          </hgroup>
+          
+          <nav>
+			<?php wp_nav_menu( array('menu' => 'main', 'depth' => 3 )); ?>
+			<div class="clearfix"></div>
+		</nav>
+	<div class="clearfix"></div>
+     </div><!-- end inner header -->
+<div class="clearfix">&nbsp;</div>
+</header><!-- end header -->
 <div class="lineThrough"></div>
