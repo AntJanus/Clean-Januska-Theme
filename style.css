@@ -476,7 +476,7 @@ color:#87A780;
 
 
 
-#slideShow,#mainContent,footer {
+#slideShow,#mainContent, #innerFooter{
 
 padding:0 .5%;
 
@@ -981,9 +981,25 @@ padding: 5px 0;
 }
 
 
+footer{
+	padding: 5% 0;
+	background-color: #87A780;
+}
 
+#footerBgr{
+	background: url(images/footerBgr.png) top left repeat-x;	
+	height:110px;
+	width:100%;
+}
 
+#innerFooter{
+width:75%;
+color: #fff;
 
+margin:0 auto;
+
+min-width:735px;
+}
 /******** COMMENTS *********/
 
 #commentform textarea{

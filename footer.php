@@ -1,9 +1,19 @@
+<div id="footerBgr">
+</div>
 <footer>
-				<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('footer') ) : else : ?>
+<div id="innerFooter">
+<div class="one_third">
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+</div>
+<div class="one_third">
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+</div>
+<div class="one_third last">
+<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+</div>
+<div class="clearboth"></div>
 
-				<?php endif; ?>
-<div id="copyrightInfo">&copy; 2011 Antonin Januska | <?php wp_nav_menu( array('menu' => 'footer', 'container'       => '',  )); ?></div>
-
+</div>
 </footer>
 <?php wp_footer();?>
 
