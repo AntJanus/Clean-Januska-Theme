@@ -22,7 +22,7 @@
 				<?php endif; ?>
 </div>
 <div class="clearboth"></div>
-
+<div id="footerCopy">2011 &copy; Antonin Januska</div>
 </div>
 </footer>
 <?php wp_footer();?>

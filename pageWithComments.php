@@ -75,6 +75,6 @@ echo $postDate ?>" pubdate> <?php echo $postDate2; ?></time>
 <!-- END MAIN CONTENT WRAPPER -->
 
 <div id="blogNav">
-  <?php posts_nav_link( ' ', '<img src="' . get_bloginfo('stylesheet_directory') . '/images/prev.jpg" />', '<img src="' . get_bloginfo('stylesheet_directory') . '/images/next.jpg" />' ); ?>
+  <?php posts_nav_link( ' ', '<img src="' . get_stylesheet_directory_uri() . '/images/prev.jpg" />', '<img src="' . get_stylesheet_directory_uri() . '/images/next.jpg" />' ); ?>
 </div>
 <?php get_footer();?>

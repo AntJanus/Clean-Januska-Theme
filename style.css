@@ -27,6 +27,8 @@ Tags: green, white, two-columns, one-column, flexible-width, custom-background, 
 
 */
 
+@import url("extras.css");
+
 
 
 @media -o-paged {
@@ -56,9 +58,9 @@ header {
 	width:70%;
 }
 }
-/*
 
 html {     
+/*
 
     background-image: 
 
@@ -93,10 +95,9 @@ html {
     background-size: .75em .75em;  
 
     background-position: 0 -0.5em; 
+	*/
 
 }
-
-*/
 
 
 
@@ -111,8 +112,7 @@ body {
 }
 body {
 	background-color: #fff;
-	background-image: 
- -webkit-linear-gradient(0deg, transparent 79px, #ADD4AB 79px, #ADD4AB 81px, transparent 81px),  -webkit-linear-gradient(#eee .05em, transparent .05em);
+	background-image: -webkit-linear-gradient(#eee .05em, transparent .05em);
 	background-size: 100% 1.2em;/*   -webkit-linear-gradient(0deg, transparent 79px, #B92E3B 79px, #B92E3B 81px, transparent 81px), */
 }
 h1, h2, h3, h4, h5, h6 {
@@ -169,7 +169,7 @@ p img.right {
 }
 a {
 	text-decoration:none;
-	color:#327F20;
+	color:#567A4E;
 }
 blockquote {
 	color:#666;
@@ -233,7 +233,8 @@ html, body {
 	padding:0;
 }
 a:hover {
-	color:#87A780;
+	color:#25451E;
+	text-decoration:underline;
 }
 #slideShow, #mainContent, #innerFooter {
 	padding:0 .5%;
@@ -244,14 +245,15 @@ a:hover {
 }
 
 .post{
-margin-bottom: 35px;	
+margin-bottom: 35px;
+clear:both;	
 }
 
 .fullSize {
 	width: 100% !Important;
 }
 #sidebar {
-	float: left;
+	float: right;
 margin-left: 1%;
 width: 28%;
 text-align: left;
@@ -290,6 +292,7 @@ header {
 	width:100%;
 	background:#fff;
 	height: 4em;
+	z-index:1000;
 	box-shadow: 0 0 11px 1px #999;
 }
 #innerHeader {
@@ -330,6 +333,11 @@ nav > div > ul > li > a {
 	display:block;
 	padding: 1.7em 0.8em;
 }
+
+nav a:hover{
+	text-decoration:underline;
+}
+
 nav>div>ul>li:first-child {
 	padding-right:0;
 }
@@ -361,6 +369,8 @@ nav ul li ul {
 	color:#fff;
 }
 
+
+
 .clearfix:after {
 	content:".";
 	display:block;
@@ -371,6 +381,8 @@ nav ul li ul {
 }
 .clearfix {
 	display:inline-block;
+	width:100%;
+	clear:both;
 }
 html[xmlns] .clearfix {
 	display:block;
@@ -403,7 +415,7 @@ html[xmlns] .clearfix {
 }
 #mainContent {
 	width:70%;
-	padding:2em 1em;
+	padding:3em 1em;
 	margin:3em auto 0;
 	min-height:50em;
 	min-width:735px;
@@ -421,6 +433,12 @@ header h1 {
 	font-size:2em;
 	margin-top: .4em;
 }
+
+hgroup a:hover{
+	color:#000;
+	text-decoration:none;	
+}
+
 header hgroup {
 	width:30%;
 }
@@ -470,13 +488,10 @@ em, dfn, tfoot {
 	font-weight:bold;
 }
 footer {
-	padding: 2% 0 3%;
-	background-color: #87A780;
+	box-shadow: inset 0 3px 14px 0 #333;
+	background-color: #567A4E;
 }
 #footerBgr {
-	background: url(images/footerBgr.png) top left repeat-x;
-	height:110px;
-	width:100%;
 }
 #innerFooter {
 	width:70%;
@@ -491,6 +506,11 @@ color: #fff;
 
 footer a:hover{
 color: #efefef;
+}
+
+#footerCopy{
+float:right;
+font-size: .8em;	
 }
 
 footer ul {
@@ -607,19 +627,3 @@ background:rgba(233, 233, 233, .6);
 .bypostauthor{
 	 }
 	 
-	 
-/* =SITE CUSTOM (remove code below if you wish)
-
--------------------------------------------------------------- */
-.ctaButtons{
-}
-
-.ctaButtons a{
-padding: 5px 0;
-background: #fff;
-display:block;
-}
-
-.ctaButtons a img{
-vertical-align: middle;	
-}

@@ -14,11 +14,10 @@ Template Name: Blog
 <section id="mainContent"><!-- MAIN CONTENT WRAPPER -->
   
   <section id="contentPosts"><!-- content posts -->
-  <?php
-$temp = $wp_query;
-$wp_query= null;
-$wp_query = new WP_Query();
-$wp_query->query('posts_per_page=5'.'&paged='.$paged);
+    <?php
+ wp_reset_postdata();
+global $paged;
+query_posts( array( 'posts_per_page' => 5, 'paged' => get_query_var('page') ) );
 while ($wp_query->have_posts()) : $wp_query->the_post();
 ?>
     <article id="post-<?php the_ID();?>" <?php post_class('post hentry hreview');?>><!-- START OF POST -->
@@ -40,14 +39,17 @@ echo $postDate ?>" pubdate> <?php echo $postDate2; ?></time>
       <?php the_category(', '); ?>
       </span></span>
       <div class="postContent entry-content">
-        <?php the_excerpt(); ?>
+         <?php 	if ( has_post_thumbnail() ) {the_post_thumbnail('thumbnail', array('class' => 'alignleft')); }?>
+		 <?php the_excerpt(); ?>
+        <div class="clearfix"></div>
       </div>
     </article>
     <!-- END OF POST -->
     
     <?php endwhile; ?>
-    <?php $wp_query = null; $wp_query = $temp;?>
-
+    <div id="blogNav">
+      <?php posts_nav_link( ' ', '&raquo;', '&laquo;' ); ?>
+    </div>
   </section>
   <!-- end content posts -->
   
@@ -55,8 +57,4 @@ echo $postDate ?>" pubdate> <?php echo $postDate2; ?></time>
   <div class="clear"></div>
 </section>
 <!-- END MAIN CONTENT WRAPPER -->
-
-<div id="blogNav">
-  <?php posts_nav_link( ' ', '<img src="' . get_bloginfo('stylesheet_directory') . '/images/prev.jpg" />', '<img src="' . get_bloginfo('stylesheet_directory') . '/images/next.jpg" />' ); ?>
-</div>
 <?php get_footer();?>

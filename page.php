@@ -41,7 +41,4 @@ echo $postDate ?>" pubdate> <?php echo $postDate2; ?></time>
 </section>
 <!-- END MAIN CONTENT WRAPPER -->
 
-<div id="blogNav">
-  <?php posts_nav_link( ' ', '<img src="' . get_bloginfo('stylesheet_directory') . '/images/prev.jpg" />', '<img src="' . get_bloginfo('stylesheet_directory') . '/images/next.jpg" />' ); ?>
-</div>
 <?php get_footer();?>

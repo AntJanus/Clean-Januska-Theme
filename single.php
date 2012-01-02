@@ -15,38 +15,13 @@ if($columns == "false" || empty($columns)) { $colTrig = "no-col";} else{ $colTri
 $classes = "hentry hnews single ".$colTrig;
 
 ?>
-    <article id="post-<?php the_ID();?>" <?php post_class($classes);?> ><!-- START OF POST -->
-      
-      <h1 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" class="url">
-        <?php the_title(); ?>
-        </a></h1>
-      <span class="meta  vcard">
-      <time class="updated" datetime="<?php
-
-$postDate = get_the_date('c');
-
-$postDate2 = get_the_date('d.m.Y');
-
-echo $postDate ?>" pubdate> <?php echo $postDate2; ?></time>
-      | <span class="byline fn author">
-      <?php the_author_posts_link(); ?>
-      </span> | <a href="mailto:<?php the_author_meta('email'); ?>" class="email author">email</a> |
-      <?php the_category(', '); ?>
-      </span></span>
-      <div class="rdbWrapper" data-show-read="1" data-show-send-to-kindle="1" data-show-print="1" data-show-email="1" data-orientation="0" data-version="1" data-bg-color="transparent"></div>
-      <script type="text/javascript">(function() {var s = document.getElementsByTagName("script")[0],rdb = document.createElement("script"); rdb.type = "text/javascript"; rdb.async = true; rdb.src = document.location.protocol + "//www.readability.com/embed.js"; s.parentNode.insertBefore(rdb, s); })();</script>
-      <div class="postContent entry-content">
-        <?php the_content(); ?>
-        <p class="postmetadata">Posted in
-          <?php the_category(', '); ?>
-          <br />
-          <?php the_tags(); ?>
-          <br />
-          Source: <span class="vcard"><span class="source-org copyright">
-          <?php bloginfo('name'); ?>
-          </span></span></p>
-      </div>
-    </article>
+    <?php 
+	global $loopMeta, $loopMeta2, $loopExcerpt;
+	$loopMeta = 1;
+	$loopMeta2 = 1;
+	$loopExcerpt = 0;
+	
+	include(locate_template('microLoop.php')); ?>
     <!-- END OF POST -->
     
     <?php endwhile; endif;?>
@@ -66,6 +41,6 @@ echo $postDate ?>" pubdate> <?php echo $postDate2; ?></time>
 <!-- END MAIN CONTENT WRAPPER -->
 
 <div id="blogNav">
-  <?php posts_nav_link( ' ', '<img src="' . get_bloginfo('stylesheet_directory') . '/images/prev.jpg" />', '<img src="' . get_bloginfo('stylesheet_directory') . '/images/next.jpg" />' ); ?>
+  <?php posts_nav_link( ' ', '&raquo;', '&laquo;' ); ?>
 </div>
 <?php get_footer();?>

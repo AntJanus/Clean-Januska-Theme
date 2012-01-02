@@ -1,0 +1,22 @@
+.workImg{
+width: 50%;
+float:left;	
+}
+
+.workDesc{
+float:right;
+width:50%;	
+}
+
+.ctaButtons{
+}
+
+.ctaButtons a{
+padding: 5px 0;
+background: #fff;
+display:block;
+}
+
+.ctaButtons a img{
+vertical-align: middle;	
+}
