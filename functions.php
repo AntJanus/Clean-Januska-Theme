@@ -2,8 +2,6 @@
 
 if ( ! isset( $content_width ) ) $content_width = 750;
 
-/* MENUS AND POST FORMATS */
-register_post_type( 'book', array( 'title' ) );
 add_theme_support('post-formats',  array( 'aside', 'link', 'status', 'quote', 'image', 'nocolumn' ));
 function register_my_menus() {
 register_nav_menus(

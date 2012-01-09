@@ -1,5 +1,3 @@
-<div id="footerBgr">
-</div>
 <footer>
 <div id="innerFooter">
 <div class="one_third">

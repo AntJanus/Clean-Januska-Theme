@@ -9,6 +9,19 @@
 		<meta name="title" content="<?php wp_title(''); ?>" />
 		<link href="http://fonts.googleapis.com/css?family=Poly" rel="stylesheet" type="text/css">
 	<meta name="readability-verification" content="nbLkAUkYEnQWqhp75Ds5gpZT4wuTDt2NcGhLTXrJ"/>	
+        <!-- BELOW IS A SAMPLE DUBLIN CORE META DATA HEADER -->
+   <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+	<meta name="DC.title" content="<?php wp_title(''); ?>">
+	<meta name="DC.description" content="<?php if ( is_single() ) {
+        single_post_title('', true); 
+    } else {
+        bloginfo('name'); echo " - "; bloginfo('description');
+    }
+    ?>">
+	<meta name="DC.language" scheme="ISO639-1" content="en">
+    <meta name="DC.publisher" content="<?php bloginfo('name');?>">
+    <!-- END DUBLIN CORE -->
+
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />	
 	<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats please -->
 
