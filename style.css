@@ -9,7 +9,7 @@ Theme Name: clean Januska
 
 Description: professionally developed theme for AntJanus.com
 
-Version: 0.9
+Version: 1.0
 
 License: Open For Anyone To Use
 
@@ -117,11 +117,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-stroke: 1px transparent;
 	font-smoothing: antialiased;
-}
-body {
 	background-color: #fff;
-	background-image: -webkit-linear-gradient(#eee .05em, transparent .05em);
-	background-size: 100% 1.2em;/*   -webkit-linear-gradient(0deg, transparent 79px, #B92E3B 79px, #B92E3B 81px, transparent 81px), */
+	background-image: url(images/bgr.png);
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight:400;
@@ -257,6 +254,10 @@ margin-bottom: 35px;
 clear:both;	
 }
 
+#blogNav{
+font-size: 25px;	
+}
+
 .fullSize {
 	width: 100% !Important;
 }
@@ -293,12 +294,10 @@ padding-left: 7px;
 
 header {
 	border-bottom:5px solid #87A780;
-	background: #fff;
+	background: rgba(255, 255, 255, .7);
 	margin: 0 auto;
-	position:fixed;
 	top:0;
 	width:100%;
-	background:#fff;
 	height: 4em;
 	z-index:1000;
 	box-shadow: 0 0 11px 1px #999;
@@ -426,7 +425,7 @@ html[xmlns] .clearfix {
 #mainContent {
 	width:70%;
 	padding:3em 1em;
-	margin:3em auto 0;
+	margin:1em auto 0;
 	min-height:50em;
 	min-width:735px;
 }
