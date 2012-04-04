@@ -47,8 +47,8 @@ echo $postDate ?>" pubdate> <?php echo $postDate2; ?></time>
     <!-- END OF POST -->
     
     <?php endwhile; ?>
-    <div id="blogNav">
-      <?php posts_nav_link( ' ', '&raquo;', '&laquo;' ); ?>
+<div id="blogNav">
+      <?php posts_nav_link( ' &#183 ', 'previous page &raquo;', ' &laquo; next page' ); ?>
     </div>
   </section>
   <!-- end content posts -->

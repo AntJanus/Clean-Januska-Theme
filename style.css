@@ -111,14 +111,14 @@ html {
 
 body {
 	font-size:100%;
-	color:#222;
+	color:#000;
 	font-family: Ubuntu, 'Droid Sans', Verdana, Arial, Helvetica sans-serif;
 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-stroke: 1px transparent;
 	font-smoothing: antialiased;
-	background-color: #fff;
-	background-image: url(images/bgr.png);
+	background-color: #000;
+	 background-image: url(images/bgr.png); 
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight:400;
@@ -256,6 +256,10 @@ clear:both;
 
 #blogNav{
 font-size: 25px;	
+}
+
+.page-template-blog-php .post p{
+text-align: justify;	
 }
 
 .fullSize {
@@ -423,11 +427,12 @@ html[xmlns] .clearfix {
 	column-span: all;
 }
 #mainContent {
-	width:70%;
+	width:90%;
 	padding:3em 1em;
 	margin:1em auto 0;
 	min-height:50em;
 	min-width:735px;
+	max-width: 1140px;
 }
 .meta ul li {
 	display:inline;
@@ -535,6 +540,43 @@ footer ul li:before {
 footer ul li a{
 color: #fff;	
 }
+
+/************************* SLIDER
+**********************************************/
+
+#slider{	
+}
+
+#innerSlide img{
+
+}
+
+#innerSlide{
+	overflow: hidden;	
+}
+
+#sNav {
+height: 96px;
+margin: .75em auto;
+}
+
+#sNavList{
+padding: .75em;
+text-align:center;	
+}
+
+#sNav ul{
+list-style-type:none;
+}
+
+#sNav li{
+height: 72px;
+width: 72px;
+padding: 0 30px;
+overflow:hidden;
+display:inline;
+}
+
 /******** COMMENTS *********/
 
 #commentform textarea {
@@ -635,3 +677,6 @@ background:rgba(233, 233, 233, .6);
 .bypostauthor{
 	 }
 	 
+.excerptLink {
+clear:both;	
+}

@@ -39,8 +39,7 @@ $classes = "hentry hnews single ".$colTrig;
   <div class="clear"></div>
 </section>
 <!-- END MAIN CONTENT WRAPPER -->
-
 <div id="blogNav">
-  <?php posts_nav_link( ' ', '&raquo;', '&laquo;' ); ?>
-</div>
+      <?php posts_nav_link( ' &#183 ', 'previous page &raquo;', ' &laquo; next page' ); ?>
+    </div>
 <?php get_footer();?>

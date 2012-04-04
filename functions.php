@@ -192,7 +192,7 @@ add_custom_background();
 /* EXCERPTS */
 function excerpt_read_more_link($output) {
  global $post;
- return $output . '<a href="'. get_permalink($post->ID) . '"> Read More...</a>';
+ return $output . '<div class="excerptLink"><a href="'. get_permalink($post->ID) . '"> Read More...</a></div>';
 }
 add_filter('the_excerpt', 'excerpt_read_more_link');
 
@@ -267,4 +267,15 @@ echo '</div>';
  wp_reset_query();
 }
 add_shortcode( 'blogPosts', 'showBlogPosts' );
+
+function cycle_method() {
+   // register your script location, dependencies and version
+   wp_register_script('cycle',
+       get_template_directory_uri() . '/cycle.js',
+       array('jquery'),
+       '1.0' );
+   // enqueue the script
+   wp_enqueue_script('cycle');
+}
+add_action('wp_enqueue_scripts', 'cycle_method');
 ?>

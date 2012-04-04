@@ -31,7 +31,23 @@ Template Name: Main Page
           
 
    <div class="postContent entry-content">
-
+	<section id="slider">
+<div id="innerSlide">
+<?php 
+  $custom_fields = get_post_custom();
+  $my_custom_field = $custom_fields['slide'];
+  foreach ( $my_custom_field as $key => $value ){
+	echo "<article>";
+    echo $value;
+	echo "</article>";
+  }
+?> 
+</div>
+<div id="sNav">
+<ul id="sNavList">
+</ul>
+</div>
+</section>
      <?php the_content(); ?>
 
      
@@ -56,13 +72,6 @@ Template Name: Main Page
 
 </section><!-- END MAIN CONTENT WRAPPER -->
 
-<div id="blogNav">
-
-<?php /* posts_nav_link( ' ', '<img src="' . get_stylesheet_directory_uri() . '/images/prev.jpg" />', '<img src="' . get_stylesheet_directory_uri() . '/images/next.jpg" />' ); */
-
- wp_link_pages(); ?>
-
-</div>
 
 
 
